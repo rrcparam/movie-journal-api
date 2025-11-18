@@ -60,3 +60,14 @@
 
 # Endpoint: GET /trending..
 
+ Next Steps for Milestone 3
+
+1. I would  add Firebase Authentication for login and registration in Milestone 3.
+2. Will Protect routes such as add movie, delete movie, and add review.
+3. Going to Add Joi validation schemas for movie, review and watchlist payloads.
+4. Extend Swagger documentation to include:
+   - Search endpoint
+   - Authentication endpoints
+   - Error responses
+5. IN Milestone 3 may be  I Add more unit tests for edge cases and validations errors.
+8. would try Optimize search feature to support filtering by year and rating.
