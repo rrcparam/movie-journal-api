@@ -1,5 +1,5 @@
 New Component Plan  
- Search Feature
+Express Rate limiter
 Student: Paramdeep Singh  
 Project: Movie Journal API  
 Date: 15 November 2025  
@@ -8,17 +8,40 @@ Date: 15 November 2025
  1. Overview of the component
 
  I am adding the new component to the Movie Journal API 
- that is a (Search System) that helps users to search movies by title or genre.
- This feature expands the functionality of  API more tahn  CRUD operations and introduces new backend logic that supports flexible movie discovery.
 
-The main motive  of this component is to allows users to easily find
-movies based on keywords, making the Movie Journal more user-friendly
-and practical for easy use.
+ The new component added to the Movie Journal API is kind a  Rate Limiting using the express-rate-limit library.
+
+Rate limiting controls  that how many requests an user can make within a time window. This protects the API from:
+
+Abuse
+
+Accidental overload
+
+Brute force attacks
+
+High-frequency spamming
+
+By limiting requests, the API becomes more secure and more stable especially when public.
+
 
  2. Why i choose this component
 
-I selected the search component because:
+I selected rate limiting because:
 
-- It adds meaningful functionality without requiring external APIs.
-- It is easy to test and maintain.
+It is valuable real-world backend feature
 
+It would  directly improves API security
+
+It is simple, maintainable, and scalable
+
+
+After  doing the 5 rapid calls to:
+
+GET http://localhost:3000/api/v1/search?query=test
+
+Response becomes:
+
+{
+  "status": 429,
+  "message": "Too many requests. Please try again later."
+}
