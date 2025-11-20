@@ -1,3 +1,4 @@
+
 import express, { Express, Request, Response } from "express";
 import cors from "cors";
 import helmet from "helmet";
@@ -6,14 +7,21 @@ import swaggerRoutes from "./config/swagger";
 import reviewRoutes from "./api/routes/reviewRoutes";
 import watchlistRoutes from "./api/routes/watchlistRoutes";
 import searchRoutes from "./api/routes/searchRoutes";
+import { apiLimiter } from "./middleware/rateLimiter";
+
+
 const app: Express = express();
 app.use(express.json());
 app.use(cors());
 app.use(helmet());
+app.use("/api/", apiLimiter);
+
 app.use("/api/v1/docs", swaggerRoutes);
 app.use("/api/v1/reviews", reviewRoutes);
 app.use("/api/v1/watchlist", watchlistRoutes);
 app.use("/api/v1", searchRoutes);
+
+
 
 
 // Health Check
