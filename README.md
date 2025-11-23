@@ -38,35 +38,14 @@
 # "genre": "Sci-Fi",
   # "releaseYear": 2014,
   # "rating": 10,
-  # "review": "An emotionally powerful space good  epic.",
-  # "userId": "stula"
 }
 
- # Planned Functionality
 
-# CRUD operations for Movies and Reviews and Watchlists
 
-# Firebase Authentication for secure login and role-based authorization .
-
-# Input validations for  using the Joi to ensure reliable data
-
-# Centralized error handling middleware.
-
-# Jest unit tests for key functions and routes ensuring working properly 
-
-# New  Extended Component (Beyond Course Scope)
-
-# A Trending Movies feature will be researched and implemented that would be amazing.
-
-# Endpoint: GET /trending..
 
  Next Steps for Milestone 3
 
 1. I would  add Firebase Authentication for login and registration in Milestone 3.
-2. Will Protect routes such as add movie, delete movie, and add review.
-3. Going to Add Joi validation schemas for movie, review and watchlist payloads.
-4. Extend Swagger documentation to include
-   - Authentication endpoints
-   - Error responses
-5. IN Milestone 3 may be  I Add more unit tests for edge cases and validations errors.
-8. would try Optimize search feature to support filtering by year and rating.
+2. IN Milestone 3 may be  I Add more unit tests for edge cases and validations errors.
+3. i will add express rate limiter to the movie and review routes.
+4. I will add documentation.

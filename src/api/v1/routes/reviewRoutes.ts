@@ -3,7 +3,7 @@ import {
   getReviewsByMovieId,
   createReview,
   deleteReview,
-} from "../../controllers/reviewController";
+} from "../controllers/reviewController";
 
 const router = Router();
 

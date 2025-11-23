@@ -24,6 +24,7 @@ High-frequency spamming
 By limiting requests, the API becomes more secure and more stable especially when public.
 
 
+
  2. Why i choose this component
 
 I selected rate limiting because:
@@ -35,7 +36,7 @@ It would  directly improves API security
 It is simple, maintainable, and scalable
 
 
-After  doing the 5 rapid calls to:
+After  doing the 100 rapid calls to:
 
 GET http://localhost:3000/api/v1/search?query=test
 

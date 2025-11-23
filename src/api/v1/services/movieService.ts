@@ -1,5 +1,5 @@
 import * as movieRepository from "../repositories/movieRepository";
-import { Movie } from "../../src/models/movieModel";
+import { Movie } from "../models/movieModel";
 
 export const getAllMovies = () => movieRepository.getAllMovies();
 export const getMovieById = (id: string) => movieRepository.getMovieById(id);

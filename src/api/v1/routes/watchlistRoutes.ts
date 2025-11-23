@@ -3,7 +3,7 @@ import {
   getWatchlist,
   addToWatchlist,
   removeFromWatchlist,
-} from "../../controllers/watchlistController";
+} from "../controllers/watchlistController";
 
 const router = Router();
 

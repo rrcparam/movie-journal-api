@@ -1,4 +1,4 @@
-import { Movie } from "../../src/models/movieModel";
+import { Movie } from "../models/movieModel";
 
 let movies: Movie[] = [
   { id: "1", title: "Inception", genre: "Sci-Fi", releaseYear: 2010, rating: 9 },

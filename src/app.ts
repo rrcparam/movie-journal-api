@@ -2,12 +2,12 @@
 import express, { Express, Request, Response } from "express";
 import cors from "cors";
 import helmet from "helmet";
-import movieRoutes from "./api/routes/movieRoutes";
-import swaggerRoutes from "./config/swagger";
-import reviewRoutes from "./api/routes/reviewRoutes";
-import watchlistRoutes from "./api/routes/watchlistRoutes";
-import searchRoutes from "./api/routes/searchRoutes";
-import { apiLimiter } from "./middleware/rateLimiter";
+import movieRoutes from "./api/v1/routes/movieRoutes";
+import swaggerRoutes from "../config/swagger";
+import reviewRoutes from "./api/v1/routes/reviewRoutes";
+import watchlistRoutes from "./api/v1/routes/watchlistRoutes";
+import searchRoutes from "./api/v1/routes/searchRoutes";
+import { apiLimiter } from "./api/v1/middleware/rateLimiter";
 
 
 const app: Express = express();

@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { searchController } from "../../controllers/searchController";
-import { apiLimiter } from "../../middleware/rateLimiter";
+import { searchController } from "../controllers/searchController";
+import { apiLimiter } from "../middleware/rateLimiter";
 
 const router = Router();
 
