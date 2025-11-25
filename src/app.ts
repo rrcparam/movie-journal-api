@@ -1,14 +1,15 @@
+import setupSwagger from "./config/swagger";
+import authRoutes from "./api/v1/routes/authRoutes";
 
 import express, { Express, Request, Response } from "express";
 import cors from "cors";
 import helmet from "helmet";
 import movieRoutes from "./api/v1/routes/movieRoutes";
-import swaggerRoutes from "../config/swagger";
 import reviewRoutes from "./api/v1/routes/reviewRoutes";
 import watchlistRoutes from "./api/v1/routes/watchlistRoutes";
 import searchRoutes from "./api/v1/routes/searchRoutes";
 import { apiLimiter } from "./api/v1/middleware/rateLimiter";
-
+import swaggerRoutes from "./config/swagger";
 
 const app: Express = express();
 app.use(express.json());
@@ -16,11 +17,14 @@ app.use(cors());
 app.use(helmet());
 app.use("/api/", apiLimiter);
 
+setupSwagger(app);
+
 app.use("/api/v1/docs", swaggerRoutes);
 app.use("/api/v1/reviews", reviewRoutes);
 app.use("/api/v1/watchlist", watchlistRoutes);
 app.use("/api/v1", searchRoutes);
 
+app.use("/api/v1/auth", authRoutes);
 
 
 
@@ -51,5 +55,8 @@ app.get("/api/v1", (req: Request, res: Response) => {
     },
   });
 });
+import { errorHandler } from "./api/v1/middleware/errorHandler";
+app.use(errorHandler);
+
 
 export default app;
