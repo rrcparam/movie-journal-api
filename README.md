@@ -38,25 +38,13 @@
 # "genre": "Sci-Fi",
   # "releaseYear": 2014,
   # "rating": 10,
-  # "review": "An emotionally powerful space good  epic.",
-  # "userId": "stula"
 }
 
- # Planned Functionality
 
-# CRUD operations for Movies and Reviews and Watchlists
 
-# Firebase Authentication for secure login and role-based authorization .
 
-# Input validations for  using the Joi to ensure reliable data
+ what done in  Milestone 3
 
-# Centralized error handling middleware.
-
-# Jest unit tests for key functions and routes ensuring working properly 
-
-# New  Extended Component (Beyond Course Scope)
-
-# A Trending Movies feature will be researched and implemented that would be amazing.
-
-# Endpoint: GET /trending..
-
+1. added Firebase Authentication for login and registration in Milestone 3.
+2. Swagger Documentation Added
+3. Updated Route Files
