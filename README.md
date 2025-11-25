@@ -43,9 +43,8 @@
 
 
 
- Next Steps for Milestone 3
+ what done in  Milestone 3
 
-1. I would  add Firebase Authentication for login and registration in Milestone 3.
-2. IN Milestone 3 may be  I Add more unit tests for edge cases and validations errors.
-3. i will add express rate limiter to the movie and review routes.
-4. I will add documentation.
+1. added Firebase Authentication for login and registration in Milestone 3.
+2. Swagger Documentation Added
+3. Updated Route Files
