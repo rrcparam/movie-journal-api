@@ -41,10 +41,55 @@
 }
 
 
+Welcome to the Movie Journal API 
+Below are the steps to clone, install, run it.
+
+ 1. Clone the Repository
+git clone https://github.com/rrcparam/movie-journal-api.git
+cd movie-journal-api
+
+ 2. Install Dependencies
+npm install
 
 
- what done in  Milestone 3
+Make sure TypeScript builds correctly:
 
-1. added Firebase Authentication for login and registration in Milestone 3.
-2. Swagger Documentation Added
-3. Updated Route Files
+npm run build
+
+Run the Project 
+npm start
+
+
+Server will start:
+
+Server running at http://localhost:3000/api/v1
+Swagger docs at http://localhost:3000/api/v1/docs
+
+
+
+ 5. tO  Get Firebase Authentication Token.
+
+To test protected routes, you must use a Firebase ID Token.
+ we would 
+Create a test user:
+
+email: testuser1@gmail.com
+password: 123456
+
+Request ID Token using Postman
+
+POST:
+
+https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBTxx0xrKNEFEI3aHZy89i7UtHpwmYTLIs
+
+
+
+Body (JSON):
+
+{
+  "email": "testuser1@gmail.com",
+  "password": "123456",
+  "returnSecureToken": true
+}
+
+after getting token we will use it becuse it requires token to request.
