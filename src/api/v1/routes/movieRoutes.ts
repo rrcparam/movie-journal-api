@@ -25,7 +25,7 @@ const router = Router();
  *               items:
  *                 $ref: "#/components/schemas/Movie"
  */
-router.get("/", getAllMovies);
+router.get("/",authenticate, getAllMovies);
 
 
 /**
@@ -46,7 +46,7 @@ router.get("/", getAllMovies);
  *       404:
  *         description: Movie not found
  */
-router.get("/:id", getMovieById);
+router.get("/:id",authenticate, getMovieById);
 
 /**
  * @openapi
@@ -78,7 +78,7 @@ router.get("/:id", getMovieById);
  *       "401":
  *         description: Unauthorized
  */
-router.post("/", authenticate, createMovie);
+router.post("/",authenticate,createMovie);
 
 /**
  * @openapi
